@@ -1,11 +1,13 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  config = function()
-      require("nvim-treesitter.config").setup {
-          ensure_installed = {"c", "lua", "fish", "vim"},
-          highlight = { enable = true },
-      }
-  end
+	"nvim-treesitter/nvim-treesitter",
+	config = function()
+		local filetypes = { "bash", "c", "fish", "lua", "luadoc", "vim", "vimdoc" }
+		require("nvim-treesitter").install(filetypes)
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = filetypes,
+			callback = function()
+				vim.treesitter.start()
+			end,
+		})
+	end,
 }
-
