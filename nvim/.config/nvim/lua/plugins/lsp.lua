@@ -103,6 +103,8 @@ return {
 			"lua-language-server", -- Lua Language server
 			"stylua", -- Used to format Lua code
 			"fish-lsp",
+			"zls",
+			"rust-analyzer",
 			-- You can add other tools here that you want Mason to install
 		})
 
