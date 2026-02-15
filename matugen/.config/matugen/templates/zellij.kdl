@@ -1,0 +1,16 @@
+
+themes {
+    default {
+        fg "{{ colors.on_surface.default.hex }}"
+        bg "{{ colors.surface.default.hex }}"
+        black "{{ colors.surface_container_lowest.default.hex }}"
+        red "{{ palettes.error._40.hex }}"
+        green "{{ palettes.primary._40.hex }}"
+        yellow "{{ palettes.tertiary._40.hex }}"
+        blue "{{ palettes.primary._50.hex }}"
+        magenta "{{ palettes.secondary._40.hex }}"
+        cyan "{{ palettes.tertiary._50.hex }}"
+        white "{{ colors.on_surface_variant.default.hex }}"
+        orange "{{ palettes.tertiary._60.hex }}"
+    }
+}

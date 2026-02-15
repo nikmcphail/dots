@@ -1,0 +1,5 @@
+[config]
+
+[templates.zellij]
+input_path = '~/.config/matugen/templates/zellij.kdl'
+output_path = '~/.config/zellij/themes/default.kdl'
