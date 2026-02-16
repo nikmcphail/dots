@@ -2,15 +2,12 @@ return {
 	{
 		"nvim-mini/mini.statusline",
 		version = false,
-		opts = {},
+		opts = {
+			use_icons = true,
+		},
 	},
 	{
 		"nvim-mini/mini.pairs",
-		version = false,
-		opts = {},
-	},
-	{
-		"nvim-mini/mini.tabline",
 		version = false,
 		opts = {},
 	},
