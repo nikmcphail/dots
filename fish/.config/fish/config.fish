@@ -1,4 +1,8 @@
-set fish_greeting
+
+function fish_greeting
+    # paru -S pokemon-colorscripts-git
+    pokemon-colorscripts -r -s --no-title
+end
 
 set -x MANROFFOPT "-c"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
