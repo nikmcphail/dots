@@ -1,2 +1,3 @@
 dankcolors.lua
 zellij/.config/zellij/themes
+nvim/.config/nvim/lua/config/fix-cursorline.lua

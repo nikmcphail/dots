@@ -30,3 +30,5 @@ require("lazy").setup({
 })
 
 require("config.keymaps")
+-- Make sure to use matugen to auto generate the cursorline fix.
+require("config.fix-cursorline")
