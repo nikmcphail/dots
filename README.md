@@ -11,7 +11,7 @@ Clone the repo:
 git clone https://github.com/nikmcphail/dots.git ~/dots
 ```
 
-Make sure you have GNU Stow installed:
+!!! Make sure you have GNU Stow installed !!!
 
 Arch:
 ```
@@ -20,5 +20,5 @@ paru -S stow
 
 Enter the dots directory and stow desired configs:
 ```
-stow nvim kitty fish zellij
+cd ~/dots && stow nvim kitty fish zellij
 ```
