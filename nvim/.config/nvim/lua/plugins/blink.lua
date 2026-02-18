@@ -22,13 +22,7 @@ return {
 			opts = {},
 		},
 	},
-
 	version = "1.9.1",
-	-- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-	-- build = 'cargo build --release',
-	-- If you use nix, you can build from source using latest nightly rust with:
-	-- build = 'nix run .#build-plugin',
-
 	---@module 'blink.cmp'
 	---@type blink.cmp.Config
 	opts = {
@@ -53,7 +47,13 @@ return {
 		},
 
 		-- (Default) Only show the documentation popup when manually triggered
-		completion = { documentation = { auto_show = false, auto_show_delay_ms = 500 } },
+		completion = {
+			documentation = { auto_show = true, auto_show_delay_ms = 250 },
+			menu = {
+				border = "rounded",
+				winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+			},
+		},
 
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
