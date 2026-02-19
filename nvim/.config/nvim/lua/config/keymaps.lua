@@ -1,6 +1,4 @@
 -- stylua: ignore start
-vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory" })
-vim.keymap.set("n", "<leader>-", "<cmd>Oil --float<CR>", { desc = "Open parent directory (floating)" })
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 vim.keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Open Mason" })
 
@@ -20,4 +18,5 @@ vim.keymap.set("n", "<M-x>", "<cmd>bdelete<CR>")
 
 -- These are annoying on my laptop's specific keyboard
 vim.keymap.set({"n", "v", "i"}, "<PageUp>", "<Nop>")
+vim.keymap.set({"n", "v", "i"}, "<PageDown>", "<Nop>")
 -- stylua: ignore end
