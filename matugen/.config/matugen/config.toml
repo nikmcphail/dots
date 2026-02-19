@@ -3,7 +3,3 @@
 [templates.zellij]
 input_path = '~/.config/matugen/templates/zellij.kdl'
 output_path = '~/.config/zellij/themes/default.kdl'
-
-[templates.fix-cursorline]
-input_path = '~/.config/matugen/templates/fix-cursorline.lua'
-output_path = '~/.config/nvim/lua/config/fix-cursorline.lua'
