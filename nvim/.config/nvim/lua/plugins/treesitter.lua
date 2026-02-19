@@ -30,6 +30,7 @@ return {
 				"markdown_inline",
 				"fish",
 				"zig",
+				"rust",
 			},
 		})
 
