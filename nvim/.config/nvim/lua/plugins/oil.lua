@@ -12,6 +12,12 @@ return {
 			["<C-c>"] = false,
 			["q"] = "actions.close",
 		},
+		float = {
+			border = "rounded",
+		},
+		confirmation = {
+			border = "rounded",
+		},
 	},
 	dependencies = { { "nvim-mini/mini.icons", opts = {} } },
 	lazy = false,

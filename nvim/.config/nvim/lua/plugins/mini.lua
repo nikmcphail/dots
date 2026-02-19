@@ -11,9 +11,4 @@ return {
 		version = false,
 		opts = {},
 	},
-	{
-		"nvim-mini/mini.starter",
-		version = false,
-		opts = {},
-	},
 }
