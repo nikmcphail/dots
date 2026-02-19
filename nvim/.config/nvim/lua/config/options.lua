@@ -14,6 +14,7 @@ o.relativenumber = true
 o.signcolumn = "yes"
 
 o.cursorline = true
+o.mouse = ""
 
 o.undofile = true
 
@@ -27,3 +28,8 @@ o.splitright = true
 o.splitbelow = true
 
 o.scrolloff = 10
+
+o.hlsearch = false
+o.incsearch = true
+
+o.termguicolors = true
