@@ -33,3 +33,5 @@ o.hlsearch = false
 o.incsearch = true
 
 o.termguicolors = true
+
+o.cmdheight = 0

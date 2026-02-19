@@ -1,1 +1,7 @@
 zellij/.config/zellij/themes
+
+fish/.config/fish/functions
+fish/.config/fish/conf.d
+fish/.config/fish/completions
+fish_plugins
+fish_variables
