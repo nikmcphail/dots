@@ -11,4 +11,14 @@ return {
 		version = false,
 		opts = {},
 	},
+	{
+		"nvim-mini/mini.indentscope",
+		version = false,
+		opts = {},
+	},
+	{
+		"nvim-mini/mini.tabline",
+		version = false,
+		opts = {},
+	},
 }
