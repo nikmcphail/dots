@@ -14,7 +14,12 @@ o.relativenumber = true
 o.signcolumn = "yes"
 
 o.cursorline = true
-o.mouse = ""
+
+if vim.env.SSH_CLIENT ~= nil then
+	o.mouse = "a"
+else
+	o.mouse = ""
+end
 
 o.undofile = true
 
