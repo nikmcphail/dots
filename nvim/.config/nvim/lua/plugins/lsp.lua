@@ -1,7 +1,14 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		{ "mason-org/mason.nvim", opts = {} },
+		{
+			"mason-org/mason.nvim",
+			opts = {
+				ui = {
+					border = "rounded",
+				},
+			},
+		},
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		{ "j-hui/fidget.nvim", opts = {} },
 		"saghen/blink.cmp",
@@ -60,6 +67,7 @@ return {
 			"lua_ls", -- Lua Language server
 			"stylua", -- Used to format Lua code
 			"rust_analyzer",
+			"fish_lsp",
 		})
 
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
