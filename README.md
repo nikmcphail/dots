@@ -87,4 +87,9 @@ grD : Goto declaration
 UFO:
 zR : Open all folds
 zM : Close all folds
+
+Flash:
+s : Flash
+r : Remote Flash
+<Ctrl-s> : Toggle Flash Search
 ```
