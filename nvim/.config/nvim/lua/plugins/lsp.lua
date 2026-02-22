@@ -76,6 +76,7 @@ return {
 			"lua_ls", -- Lua Language server
 			"stylua", -- Used to format Lua code
 			"rust_analyzer",
+			"rustfmt",
 			"fish_lsp",
 			"taplo",
 			"zls",
