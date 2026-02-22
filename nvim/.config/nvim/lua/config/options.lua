@@ -8,6 +8,8 @@ o.smarttab = true
 o.smartindent = true
 o.autoindent = true
 o.breakindent = true
+o.wrap = true
+o.linebreak = true
 
 o.number = true
 o.relativenumber = true
