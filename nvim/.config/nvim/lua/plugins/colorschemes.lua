@@ -10,12 +10,6 @@ return {
 	-- 		},
 	-- 	},
 	-- },
-	-- {
-	-- 	"ribru17/bamboo.nvim",
-	-- 	opts = {
-	-- 		transparent = true,
-	-- 	},
-	-- },
 	{
 		"rebelot/kanagawa.nvim",
 		opts = {
