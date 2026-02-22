@@ -16,6 +16,11 @@ vim.keymap.set("n", "<M-h>", "<cmd>bprevious<CR>")
 vim.keymap.set("n", "<M-l>", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<M-x>", "<cmd>bdelete<CR>")
 
+vim.keymap.set("n", "j", "v:count ? 'j' : 'gj'", { expr = true})
+vim.keymap.set("n", "k", "v:count ? 'k' : 'gk'", { expr = true })
+vim.keymap.set("n", "<Down>", "v:count ? 'j' : 'gj'", { expr = true })
+vim.keymap.set("n", "<Up>", "v:count ? 'k' : 'gk'", { expr = true })
+
 -- These are annoying on my laptop's specific keyboard
 vim.keymap.set({"n", "v", "i"}, "<PageUp>", "<Nop>")
 vim.keymap.set({"n", "v", "i"}, "<PageDown>", "<Nop>")
