@@ -9,6 +9,7 @@ o.shiftwidth = 4
 o.tabstop = 4
 o.softtabstop = 4
 o.smarttab = true
+o.smartindent = true
 o.autoindent = true
 o.breakindent = true
 o.wrap = true

@@ -13,8 +13,7 @@ p.add({
 	"https://github.com/nvim-mini/mini.nvim",
 	"https://github.com/stevearc/oil.nvim",
 	"https://github.com/stevearc/conform.nvim",
-	"https://www.github.com/ibhagwan/fzf-lua",
-	"https://www.github.com/folke/lazydev.nvim",
+	"https://github.com/ibhagwan/fzf-lua",
 	{
 		src = "https://github.com/saghen/blink.cmp",
 		version = vim.version.range("1.*"),
@@ -36,7 +35,6 @@ packadd("mini.nvim")
 packadd("oil.nvim")
 packadd("conform.nvim")
 packadd("fzf-lua")
-packadd("lazydev.nvim")
 packadd("blink.cmp")
 packadd("LuaSnip")
 packadd("nvim-lspconfig")

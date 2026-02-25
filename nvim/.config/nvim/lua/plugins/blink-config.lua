@@ -1,9 +1,3 @@
-require("lazydev").setup({
-	library = {
-		{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
-	},
-})
-
 require("blink.cmp").setup({
 	keymap = { preset = "default" },
 	appearance = { nerd_font_variant = "mono" },
@@ -20,14 +14,7 @@ require("blink.cmp").setup({
 		},
 	},
 	sources = {
-		default = { "lazydev", "lsp", "path", "buffer", "snippets" },
-		providers = {
-			lazydev = {
-				name = "LazyDev",
-				module = "lazydev.integrations.blink",
-				score_offset = 100,
-			},
-		},
+		default = { "lsp", "path", "buffer", "snippets" },
 	},
 	snippets = {
 		expand = function(snippet)
