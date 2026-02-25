@@ -4,6 +4,8 @@ require("mason").setup({
 	},
 })
 
+require("mason-lspconfig").setup({})
+
 local augroup = vim.api.nvim_create_augroup("UserConfig", { clear = false })
 
 local diagnostic_signs = {
