@@ -1,0 +1,54 @@
+local p = vim.pack
+
+vim.api.nvim_create_augroup("UserConfig", { clear = true })
+
+-- Add packages
+p.add({
+	{
+		src = "https://github.com/nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		build = ":TSUpdate",
+	},
+	"https://github.com/rebelot/kanagawa.nvim",
+	"https://github.com/nvim-mini/mini.nvim",
+	"https://github.com/stevearc/oil.nvim",
+	"https://github.com/stevearc/conform.nvim",
+	"https://www.github.com/ibhagwan/fzf-lua",
+	"https://www.github.com/folke/lazydev.nvim",
+	{
+		src = "https://github.com/saghen/blink.cmp",
+		version = vim.version.range("1.*"),
+	},
+	"https://github.com/L3MON4D3/LuaSnip",
+	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/mason-org/mason.nvim",
+	"https://github.com/folke/which-key.nvim",
+})
+
+local function packadd(name)
+	vim.cmd("packadd " .. name)
+end
+
+packadd("nvim-treesitter")
+packadd("kanagawa.nvim")
+packadd("mini.nvim")
+packadd("oil.nvim")
+packadd("conform.nvim")
+packadd("fzf-lua")
+packadd("lazydev.nvim")
+packadd("blink.cmp")
+packadd("LuaSnip")
+packadd("nvim-lspconfig")
+packadd("mason.nvim")
+packadd("which-key.nvim")
+
+-- Require configs for packages
+require("plugins.treesitter-config")
+require("plugins.kanagawa-config")
+require("plugins.mini-config")
+require("plugins.oil-config")
+require("plugins.conform-config")
+require("plugins.fzf-config")
+require("plugins.blink-config")
+require("plugins.lsp-config")
+require("plugins.whichkey-config")

@@ -1,11 +1,14 @@
 local o = vim.opt
+local e = vim.env
+local g = vim.g
+
+o.termguicolors = true
 
 o.expandtab = true
 o.shiftwidth = 4
 o.tabstop = 4
 o.softtabstop = 4
 o.smarttab = true
-o.smartindent = true
 o.autoindent = true
 o.breakindent = true
 o.wrap = true
@@ -17,7 +20,7 @@ o.signcolumn = "yes"
 
 o.cursorline = true
 
-if vim.env.SSH_CLIENT ~= nil then
+if e.SSH_CLIENT ~= nil then
 	o.mouse = "a"
 else
 	o.mouse = ""
@@ -26,6 +29,8 @@ end
 o.undofile = true
 
 o.showmode = false
+o.cmdheight = 1
+
 o.ignorecase = true
 o.smartcase = true
 
@@ -39,6 +44,8 @@ o.scrolloff = 10
 o.hlsearch = false
 o.incsearch = true
 
-o.termguicolors = true
+o.errorbells = false
 
-o.cmdheight = 0
+o.clipboard:append("unnamedplus")
+
+g.mapleader = " "
