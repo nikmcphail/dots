@@ -19,6 +19,12 @@ alias l.="eza -a | rg -e '^\.'"
 
 alias nv="nvim"
 
+alias gia="git add "
+alias gic="git commit -m "
+alias gip="git push"
+alias gis="git status"
+alias gid="git diff "
+
 alias cd='z'
 alias ..='cd ..'
 
