@@ -30,7 +30,7 @@ end
 o.undofile = true
 
 o.showmode = false
-o.cmdheight = 1
+o.cmdheight = 0
 
 o.ignorecase = true
 o.smartcase = true
