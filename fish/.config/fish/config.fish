@@ -1,10 +1,9 @@
-
 function fish_greeting
     # paru -S pokemon-colorscripts-git
     pokemon-colorscripts -r -s --no-title
 end
 
-set -x MANROFFOPT "-c"
+set -x MANROFFOPT -c
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 set -gx BROWSER zen-browser
