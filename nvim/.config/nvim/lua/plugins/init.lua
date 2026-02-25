@@ -23,6 +23,7 @@ p.add({
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/folke/which-key.nvim",
+	"https://github.com/lewis6991/gitsigns.nvim",
 })
 
 local function packadd(name)
@@ -41,6 +42,7 @@ packadd("LuaSnip")
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("which-key.nvim")
+packadd("gitsigns.nvim")
 
 -- Require configs for packages
 require("plugins.treesitter-config")
@@ -52,3 +54,4 @@ require("plugins.fzf-config")
 require("plugins.blink-config")
 require("plugins.lsp-config")
 require("plugins.whichkey-config")
+require("plugins.gitsigns-config")
