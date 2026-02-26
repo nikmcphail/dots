@@ -9,8 +9,12 @@ p.add({
 		branch = "main",
 		build = ":TSUpdate",
 	},
-	"https://github.com/rebelot/kanagawa.nvim",
-	"https://github.com/nvim-mini/mini.nvim",
+	-- "https://github.com/rebelot/kanagawa.nvim",
+    {
+        src = "https://github.com/rose-pine/neovim",
+        name = "rose-pine",
+    },
+    "https://github.com/nvim-mini/mini.nvim",
 	"https://github.com/stevearc/oil.nvim",
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/ibhagwan/fzf-lua",
@@ -32,7 +36,8 @@ local function packadd(name)
 end
 
 packadd("nvim-treesitter")
-packadd("kanagawa.nvim")
+-- packadd("kanagawa.nvim")
+packadd("rose-pine")
 packadd("mini.nvim")
 packadd("oil.nvim")
 packadd("conform.nvim")
@@ -48,7 +53,7 @@ packadd("gitsigns.nvim")
 
 -- Require configs for packages
 require("plugins.treesitter-config")
-require("plugins.kanagawa-config")
+require("plugins.colorscheme-config")
 require("plugins.mini-config")
 require("plugins.oil-config")
 require("plugins.conform-config")
