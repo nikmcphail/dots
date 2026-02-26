@@ -4,7 +4,18 @@ require("mason").setup({
 	},
 })
 
-require("mason-lspconfig").setup({})
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"stylua",
+		"lua_ls",
+		"rust_analyzer",
+		"zls",
+		"fish_lsp",
+		"taplo",
+	},
+})
+
+require("mason-tool-installer").setup({})
 
 local augroup = vim.api.nvim_create_augroup("UserConfig", { clear = false })
 

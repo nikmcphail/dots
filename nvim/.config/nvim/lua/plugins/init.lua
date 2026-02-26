@@ -22,6 +22,7 @@ p.add({
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/mason-org/mason-lspconfig.nvim",
+	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/lewis6991/gitsigns.nvim",
 })
@@ -41,6 +42,7 @@ packadd("LuaSnip")
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("mason-lspconfig.nvim")
+packadd("mason-tool-installer.nvim")
 packadd("which-key.nvim")
 packadd("gitsigns.nvim")
 
