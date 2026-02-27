@@ -18,6 +18,7 @@ alias lt='eza -aT --color=always --group-directories-first --icons=always'
 alias l.="eza -a | rg -e '^\.'"
 
 alias nv="nvim"
+alias ff="fastfetch -c examples/8"
 
 alias gia="git add "
 alias gic="git commit -m "
