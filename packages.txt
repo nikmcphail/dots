@@ -1,0 +1,12 @@
+# Shell / Terminal
+fish
+pokemon-colorscripts-git
+
+# Editor
+neovim-nightly
+rustup
+zig
+zls
+
+# Misc
+npm
