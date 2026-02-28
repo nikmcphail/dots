@@ -1,12 +1,11 @@
 # Shell / Terminal
 fish
+zoxide
+eza
+bat
+starship
 pokemon-colorscripts-git
 
 # Editor
 neovim-nightly
 rustup
-zig
-zls
-
-# Misc
-npm
