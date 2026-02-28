@@ -10,11 +10,11 @@ p.add({
 		build = ":TSUpdate",
 	},
 	-- "https://github.com/rebelot/kanagawa.nvim",
-    {
-        src = "https://github.com/rose-pine/neovim",
-        name = "rose-pine",
-    },
-    "https://github.com/nvim-mini/mini.nvim",
+	{
+		src = "https://github.com/rose-pine/neovim",
+		name = "rose-pine",
+	},
+	"https://github.com/nvim-mini/mini.nvim",
 	"https://github.com/stevearc/oil.nvim",
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/ibhagwan/fzf-lua",
@@ -29,6 +29,7 @@ p.add({
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/lewis6991/gitsigns.nvim",
+	"https://github.com/mplusp/pack-manager.nvim",
 })
 
 local function packadd(name)
