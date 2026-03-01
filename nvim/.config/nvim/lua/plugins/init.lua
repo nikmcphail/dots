@@ -32,6 +32,7 @@ p.add({
 	"https://github.com/mplusp/pack-manager.nvim",
 	"https://github.com/folke/todo-comments.nvim",
 	"https://github.com/mluders/comfy-line-numbers.nvim",
+	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 })
 
 local function packadd(name)
@@ -55,6 +56,7 @@ packadd("which-key.nvim")
 packadd("gitsigns.nvim")
 packadd("todo-comments.nvim")
 packadd("comfy-line-numbers.nvim")
+packadd("render-markdown.nvim")
 
 -- Require configs for packages
 require("plugins.treesitter-config")
@@ -74,3 +76,5 @@ require("todo-comments").setup({
 })
 
 require("comfy-line-numbers").setup({})
+
+require("render-markdown").setup({})
