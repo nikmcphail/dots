@@ -34,6 +34,7 @@ p.add({
 	"https://github.com/mluders/comfy-line-numbers.nvim",
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 	"https://github.com/folke/twilight.nvim",
+	"https://github.com/folke/flash.nvim",
 })
 
 local function packadd(name)
@@ -59,6 +60,7 @@ packadd("todo-comments.nvim")
 packadd("comfy-line-numbers.nvim")
 packadd("render-markdown.nvim")
 packadd("twilight.nvim")
+packadd("flash.nvim")
 
 -- Require configs for packages
 require("plugins.treesitter-config")
@@ -71,6 +73,7 @@ require("plugins.blink-config")
 require("plugins.lsp-config")
 require("plugins.whichkey-config")
 require("plugins.gitsigns-config")
+require("plugins.flash-config")
 
 -- Setup small plugins
 require("todo-comments").setup({

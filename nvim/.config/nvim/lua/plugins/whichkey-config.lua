@@ -1,5 +1,8 @@
 require("which-key").setup({
 	opts = {
+		win = {
+			no_overlap = true,
+		},
 		delay = 1000,
 		plugins = {
 			presets = {
