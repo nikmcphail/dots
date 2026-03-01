@@ -30,6 +30,7 @@ p.add({
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/lewis6991/gitsigns.nvim",
 	"https://github.com/mplusp/pack-manager.nvim",
+	"https://github.com/folke/todo-comments.nvim",
 })
 
 local function packadd(name)
@@ -51,6 +52,7 @@ packadd("mason-lspconfig.nvim")
 packadd("mason-tool-installer.nvim")
 packadd("which-key.nvim")
 packadd("gitsigns.nvim")
+packadd("todo-comments.nvim")
 
 -- Require configs for packages
 require("plugins.treesitter-config")
@@ -63,3 +65,4 @@ require("plugins.blink-config")
 require("plugins.lsp-config")
 require("plugins.whichkey-config")
 require("plugins.gitsigns-config")
+require("plugins.todo-comments-config")
