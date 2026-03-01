@@ -1,6 +1,7 @@
 -- stylua: ignore start
 vim.keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Open Mason" })
 vim.keymap.set("n", "<leader>U", function() vim.pack.update() end, { desc = "Open vim.pack update" })
+vim.keymap.set("n", "<leader>T", "<cmd>Twilight<CR>", { desc = "Toggle Twilight" })
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
