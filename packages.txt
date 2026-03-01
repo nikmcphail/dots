@@ -1,11 +1,15 @@
-# Shell / Terminal
-fish
-zoxide
-eza
-bat
-starship
-pokemon-colorscripts-git
+stow
 
-# Editor
-neovim-nightly
+fish
+pokemon-colorscripts-git
+zen-browser-bin
 rustup
+eza
+fastfetch
+github-cli
+zoxide
+starship
+bat
+
+neovim-nightly
+
