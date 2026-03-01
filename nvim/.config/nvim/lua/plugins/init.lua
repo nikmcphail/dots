@@ -31,6 +31,7 @@ p.add({
 	"https://github.com/lewis6991/gitsigns.nvim",
 	"https://github.com/mplusp/pack-manager.nvim",
 	"https://github.com/folke/todo-comments.nvim",
+	"https://github.com/mluders/comfy-line-numbers.nvim",
 })
 
 local function packadd(name)
@@ -53,6 +54,7 @@ packadd("mason-tool-installer.nvim")
 packadd("which-key.nvim")
 packadd("gitsigns.nvim")
 packadd("todo-comments.nvim")
+packadd("comfy-line-numbers.nvim")
 
 -- Require configs for packages
 require("plugins.treesitter-config")
@@ -65,4 +67,10 @@ require("plugins.blink-config")
 require("plugins.lsp-config")
 require("plugins.whichkey-config")
 require("plugins.gitsigns-config")
-require("plugins.todo-comments-config")
+
+-- Setup small plugins
+require("todo-comments").setup({
+	signs = true,
+})
+
+require("comfy-line-numbers").setup({})
