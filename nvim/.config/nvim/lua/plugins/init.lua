@@ -2,83 +2,100 @@ local p = vim.pack
 
 vim.api.nvim_create_augroup("UserConfig", { clear = true })
 
--- Add packages
+local function gh(repo)
+	return "https://github.com/" .. repo
+end
+
 p.add({
 	{
-		src = "https://github.com/nvim-treesitter/nvim-treesitter",
+		src = gh("nvim-treesitter/nvim-treesitter"),
 		branch = "main",
 		build = ":TSUpdate",
 	},
-	-- "https://github.com/rebelot/kanagawa.nvim",
+	-- gh("rebelot/kanagawa.nvim"),
 	{
-		src = "https://github.com/rose-pine/neovim",
+		src = gh("rose-pine/neovim"),
 		name = "rose-pine",
 	},
-	"https://github.com/nvim-mini/mini.nvim",
-	"https://github.com/stevearc/oil.nvim",
-	"https://github.com/stevearc/conform.nvim",
-	"https://github.com/ibhagwan/fzf-lua",
+	gh("nvim-mini/mini.nvim"),
+	gh("stevearc/oil.nvim"),
+	gh("stevearc/conform.nvim"),
+	gh("ibhagwan/fzf-lua"),
 	{
-		src = "https://github.com/saghen/blink.cmp",
+		src = gh("saghen/blink.cmp"),
 		version = vim.version.range("1.*"),
 	},
-	"https://github.com/L3MON4D3/LuaSnip",
-	"https://github.com/neovim/nvim-lspconfig",
-	"https://github.com/mason-org/mason.nvim",
-	"https://github.com/mason-org/mason-lspconfig.nvim",
-	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
-	"https://github.com/folke/which-key.nvim",
-	"https://github.com/lewis6991/gitsigns.nvim",
-	"https://github.com/mplusp/pack-manager.nvim",
-	"https://github.com/folke/todo-comments.nvim",
-	"https://github.com/mluders/comfy-line-numbers.nvim",
-	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
-	"https://github.com/folke/twilight.nvim",
-	"https://github.com/folke/flash.nvim",
-	"https://github.com/hedyhli/outline.nvim",
-	"https://github.com/0mykull/nvim-fountain",
+	gh("L3MON4D3/LuaSnip"),
+	gh("neovim/nvim-lspconfig"),
+	gh("mason-org/mason.nvim"),
+	gh("mason-org/mason-lspconfig.nvim"),
+	gh("WhoIsSethDaniel/mason-tool-installer.nvim"),
+	gh("folke/which-key.nvim"),
+	gh("lewis6991/gitsigns.nvim"),
+	gh("mplusp/pack-manager.nvim"),
+	gh("folke/todo-comments.nvim"),
+	gh("mluders/comfy-line-numbers.nvim"),
+	gh("MeanderingProgrammer/render-markdown.nvim"),
+	gh("folke/twilight.nvim"),
+	gh("folke/flash.nvim"),
+	gh("hedyhli/outline.nvim"),
+	gh("0mykull/nvim-fountain"),
 })
 
 local function packadd(name)
 	vim.cmd("packadd " .. name)
 end
 
-packadd("nvim-treesitter")
--- packadd("kanagawa.nvim")
-packadd("rose-pine")
-packadd("mini.nvim")
-packadd("oil.nvim")
-packadd("conform.nvim")
-packadd("fzf-lua")
-packadd("blink.cmp")
-packadd("LuaSnip")
-packadd("nvim-lspconfig")
-packadd("mason.nvim")
-packadd("mason-lspconfig.nvim")
-packadd("mason-tool-installer.nvim")
-packadd("which-key.nvim")
-packadd("gitsigns.nvim")
-packadd("todo-comments.nvim")
-packadd("comfy-line-numbers.nvim")
-packadd("render-markdown.nvim")
-packadd("twilight.nvim")
-packadd("flash.nvim")
-packadd("outline.nvim")
-packadd("nvim-fountain")
+local packages = {
+	"nvim-treesitter",
+	-- "kanagawa.nvim",
+	"rose-pine",
+	"mini.nvim",
+	"oil.nvim",
+	"conform.nvim",
+	"fzf-lua",
+	"blink.cmp",
+	"LuaSnip",
+	"nvim-lspconfig",
+	"mason.nvim",
+	"mason-lspconfig.nvim",
+	"mason-tool-installer.nvim",
+	"which-key.nvim",
+	"gitsigns.nvim",
+	"todo-comments.nvim",
+	"comfy-line-numbers.nvim",
+	"render-markdown.nvim",
+	"twilight.nvim",
+	"flash.nvim",
+	"outline.nvim",
+	"nvim-fountain",
+}
 
--- Require configs for packages
-require("plugins.treesitter-config")
-require("plugins.colorscheme-config")
-require("plugins.mini-config")
-require("plugins.oil-config")
-require("plugins.conform-config")
-require("plugins.fzf-config")
-require("plugins.blink-config")
-require("plugins.lsp-config")
-require("plugins.whichkey-config")
-require("plugins.gitsigns-config")
-require("plugins.flash-config")
-require("plugins.outline-config")
+for _, pkg in ipairs(packages) do
+	packadd(pkg)
+end
+
+local plugin_configs = {
+	"treesitter-config",
+	"colorscheme-config",
+	"mini-config",
+	"oil-config",
+	"conform-config",
+	"fzf-config",
+	"blink-config",
+	"lsp-config",
+	"whichkey-config",
+	"gitsigns-config",
+	"flash-config",
+	"outline-config",
+}
+
+for _, cfg in ipairs(plugin_configs) do
+	local ok, err = pcall(require, "plugins." .. cfg)
+	if not ok then
+		vim.notify("Failed loading plugins." .. cfg .. ": " .. err, vim.log.levels.WARN)
+	end
+end
 
 -- Setup small plugins
 require("todo-comments").setup({
