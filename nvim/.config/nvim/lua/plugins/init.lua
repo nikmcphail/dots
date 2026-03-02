@@ -36,6 +36,7 @@ p.add({
 	"https://github.com/folke/twilight.nvim",
 	"https://github.com/folke/flash.nvim",
 	"https://github.com/hedyhli/outline.nvim",
+	"https://github.com/0mykull/nvim-fountain",
 })
 
 local function packadd(name)
@@ -63,6 +64,7 @@ packadd("render-markdown.nvim")
 packadd("twilight.nvim")
 packadd("flash.nvim")
 packadd("outline.nvim")
+packadd("nvim-fountain")
 
 -- Require configs for packages
 require("plugins.treesitter-config")
