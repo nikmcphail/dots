@@ -76,22 +76,22 @@ for _, pkg in ipairs(packages) do
 end
 
 local plugin_configs = {
-	"treesitter-config",
-	"colorscheme-config",
-	"mini-config",
-	"oil-config",
-	"conform-config",
-	"fzf-config",
-	"blink-config",
-	"lsp-config",
-	"whichkey-config",
-	"gitsigns-config",
-	"flash-config",
-	"outline-config",
+	"treesitter",
+	"colorscheme",
+	"mini",
+	"oil",
+	"conform",
+	"fzf",
+	"blink",
+	"lsp",
+	"whichkey",
+	"gitsigns",
+	"flash",
+	"outline",
 }
 
 for _, cfg in ipairs(plugin_configs) do
-	local ok, err = pcall(require, "plugins." .. cfg)
+	local ok, err = pcall(require, "plugins.configs." .. cfg)
 	if not ok then
 		vim.notify("Failed loading plugins." .. cfg .. ": " .. err, vim.log.levels.WARN)
 	end
