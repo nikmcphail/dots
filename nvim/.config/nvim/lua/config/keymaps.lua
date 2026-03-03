@@ -8,10 +8,6 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set({"n", "v"}, "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
-vim.keymap.set("n", "<M-h>", "<cmd>bprevious<CR>")
-vim.keymap.set("n", "<M-l>", "<cmd>bnext<CR>")
-vim.keymap.set("n", "<M-x>", "<cmd>bdelete<CR>")
-
 vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true })
