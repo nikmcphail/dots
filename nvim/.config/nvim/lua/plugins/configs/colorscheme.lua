@@ -1,33 +1,42 @@
 -- local kanagawa = require("kanagawa")
 --
 -- kanagawa.setup({
---     transparent = true,
---     colors = {
---         theme = {
---             all = {
---                 ui = {
---                     bg_gutter = "none"
---                 },
---             },
---         },
---     },
---     overrides = function()
---         return {
---             NormalFloat = { bg = "none" },
---             FloatBoarder = { bg = "none" },
---             FloatTitle = { bg = "none" },
---         }
---     end,
+-- 	transparent = true,
+-- 	colors = {
+-- 		theme = {
+-- 			all = {
+-- 				ui = {
+-- 					bg_gutter = "none",
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- 	overrides = function()
+-- 		return {
+-- 			NormalFloat = { bg = "none" },
+-- 			FloatBoarder = { bg = "none" },
+-- 			FloatTitle = { bg = "none" },
+-- 		}
+-- 	end,
 -- })
 
-local rosepine = require("rose-pine")
+-- local rosepine = require("rose-pine")
+--
+-- rosepine.setup({
+-- 	styles = {
+-- 		bold = true,
+-- 		transparency = true,
+-- 		italic = true,
+-- 	},
+-- })
 
-rosepine.setup({
+local tokyonight = require("tokyonight")
+
+tokyonight.setup({
+	transparent = true,
 	styles = {
-		bold = true,
-		transparency = true,
-		italic = true,
+		floats = "transparent",
 	},
 })
 
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("tokyonight")

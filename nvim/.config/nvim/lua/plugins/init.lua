@@ -13,10 +13,11 @@ p.add({
 		build = ":TSUpdate",
 	},
 	-- gh("rebelot/kanagawa.nvim"),
-	{
-		src = gh("rose-pine/neovim"),
-		name = "rose-pine",
-	},
+	-- {
+	-- 	src = gh("rose-pine/neovim"),
+	-- 	name = "rose-pine",
+	-- },
+	gh("folke/tokyonight.nvim"),
 	gh("nvim-mini/mini.nvim"),
 	gh("stevearc/oil.nvim"),
 	gh("stevearc/conform.nvim"),
@@ -50,7 +51,8 @@ end
 local packages = {
 	"nvim-treesitter",
 	-- "kanagawa.nvim",
-	"rose-pine",
+	-- "rose-pine",
+	"tokyonight.nvim",
 	"mini.nvim",
 	"oil.nvim",
 	"conform.nvim",
