@@ -10,6 +10,7 @@ require("blink.cmp").setup({
 		},
 		menu = {
 			border = "rounded",
+			winblend = 20,
 			winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
 		},
 	},
