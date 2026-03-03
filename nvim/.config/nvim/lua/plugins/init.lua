@@ -39,7 +39,8 @@ p.add({
 	gh("folke/twilight.nvim"),
 	gh("folke/flash.nvim"),
 	gh("hedyhli/outline.nvim"),
-	gh("0mykull/nvim-fountain"),
+	gh("kblin/vim-fountain"),
+	gh("folke/zen-mode.nvim"),
 })
 
 local function packadd(name)
@@ -68,7 +69,8 @@ local packages = {
 	"twilight.nvim",
 	"flash.nvim",
 	"outline.nvim",
-	"nvim-fountain",
+	"vim-fountain",
+	"zen-mode.nvim",
 }
 
 for _, pkg in ipairs(packages) do
@@ -107,3 +109,5 @@ require("comfy-line-numbers").setup({})
 require("render-markdown").setup({})
 
 require("twilight").setup({})
+
+require("zen-mode").setup({})
