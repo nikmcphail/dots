@@ -57,6 +57,8 @@ require("mini.indentscope").setup({
 	},
 })
 
+require("mini.tabline").setup({})
+
 require("mini.notify").setup({})
 
 require("mini.move").setup({})
