@@ -1,7 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
 	event = { "BufReadPre", "BufNewFile" },
-
 	opts = {
 		signs = {
 			add = { text = "\u{2590}" },
@@ -14,7 +13,6 @@ return {
 		signcolumn = true,
 		current_line_blame = false,
 	},
-
 	keys = {
 		{
 			"]h",

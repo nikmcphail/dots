@@ -11,6 +11,7 @@ return {
 		},
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		{ "mason-org/mason-lspconfig.nvim", opts = {} },
+		"saghen/blink.cmp",
 	},
 	config = function()
 		local augroup = vim.api.nvim_create_augroup("UserConfig", { clear = false })
