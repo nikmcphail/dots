@@ -1,6 +1,6 @@
 -- stylua: ignore start
+vim.keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 vim.keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Open Mason" })
-vim.keymap.set("n", "<leader>U", function() vim.pack.update() end, { desc = "Open vim.pack update" })
 vim.keymap.set("n", "<leader>T", "<cmd>Twilight<CR>", { desc = "Toggle twilight" })
 vim.keymap.set("n", "<leader>Z", "<cmd>ZenMode<CR>", { desc = "Toggle zen mode"})
 
