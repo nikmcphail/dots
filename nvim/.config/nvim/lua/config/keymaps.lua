@@ -14,6 +14,10 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true })
 
+vim.keymap.set("n", "<leader>bp", "<cmd>bprev<CR>", { desc = "Previous buffer"})
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bx", "<cmd>bd<CR>", { desc = "Delete buffer" })
+
 vim.keymap.set("n", "j", "v:count ? 'j' : 'gj'", { expr = true})
 vim.keymap.set("n", "k", "v:count ? 'k' : 'gk'", { expr = true })
 vim.keymap.set("n", "<Down>", "v:count ? 'j' : 'gj'", { expr = true })

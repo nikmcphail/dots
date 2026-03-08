@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("config.settings")
+require("config.autocommands")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"

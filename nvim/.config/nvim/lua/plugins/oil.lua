@@ -4,6 +4,11 @@ return {
 		lazy = false,
 		opts = {
 			default_file_explorer = true,
+			columns = {
+				"permissions",
+				"size",
+				"icon",
+			},
 			delete_to_trash = true,
 			view_options = {
 				show_hidden = true,

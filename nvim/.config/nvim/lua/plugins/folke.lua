@@ -45,7 +45,7 @@ return {
 			win = {
 				no_overlap = true,
 			},
-			delay = 1000,
+			delay = 500,
 			plugins = {
 				presets = {
 					actions = true,
