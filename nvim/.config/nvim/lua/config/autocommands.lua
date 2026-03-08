@@ -9,3 +9,9 @@ autocmd("TextYankPost", {
 	end,
 	group = highlight_group,
 })
+
+autocmd("VimLeavePre", {
+	callback = function()
+		vim.cmd("Vimscape flush")
+	end,
+})
