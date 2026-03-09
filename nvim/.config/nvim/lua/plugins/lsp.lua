@@ -8,6 +8,9 @@ return {
 					border = "rounded",
 				},
 			},
+			keys = {
+				{ "<leader>M", "<cmd>Mason<CR>", desc = "Open Mason" },
+			},
 		},
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		{ "mason-org/mason-lspconfig.nvim", opts = {} },

@@ -75,9 +75,15 @@ return {
 	{
 		"folke/twilight.nvim",
 		opts = {},
+		keys = {
+			{ "<leader>T", "<cmd>Twilight<CR>", desc = "Toggle Twilight" },
+		},
 	},
 	{
 		"folke/zen-mode.nvim",
 		opts = {},
+		keys = {
+			{ "<leader>Z", "<cmd>ZenMode<CR>", desc = "Toggle Zen" },
+		},
 	},
 }
