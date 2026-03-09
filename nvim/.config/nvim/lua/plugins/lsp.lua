@@ -92,11 +92,11 @@ return {
 				vim.diagnostic.open_float({ scope = "cursor" })
 			end, "Cursor diagnostics")
 
-			km("n", "<leader>nd", function()
+			km("n", "<leader>Nd", function()
 				vim.diagnostic.jump({ count = 1 })
 			end, "Next diagnostic")
 
-			km("n", "<leader>pd", function()
+			km("n", "<leader>Pd", function()
 				vim.diagnostic.jump({ count = -1 })
 			end, "Previous diagnostic")
 
