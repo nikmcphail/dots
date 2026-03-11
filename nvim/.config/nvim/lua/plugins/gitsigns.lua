@@ -11,7 +11,10 @@ return {
 			untracked = { text = "\u{25cb}" },
 		},
 		signcolumn = true,
-		current_line_blame = false,
+		current_line_blame = true,
+		preview_config = {
+			border = "rounded",
+		},
 	},
 	keys = {
 		{
