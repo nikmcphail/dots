@@ -158,6 +158,7 @@ return {
 		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {
+					runtime = { version = "LuaJIT", pathStrict = false },
 					diagnostics = { globals = { "vim" } },
 					telemetry = { enable = false },
 				},
