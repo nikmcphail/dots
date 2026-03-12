@@ -19,6 +19,8 @@ vim.keymap.set("n", "j", "v:count ? 'j' : 'gj'", { expr = true})
 vim.keymap.set("n", "k", "v:count ? 'k' : 'gk'", { expr = true })
 vim.keymap.set("n", "<Down>", "v:count ? 'j' : 'gj'", { expr = true })
 vim.keymap.set("n", "<Up>", "v:count ? 'k' : 'gk'", { expr = true })
+vim.keymap.set("i", "<Down>", "v:count ? '<C-o>j' : '<C-o>gj'", {expr = true})
+vim.keymap.set("i", "<Up>", "v:count ? '<C-o>k' : '<C-o>gk'", {expr = true})
 
 -- These are annoying on my laptop's specific keyboard
 vim.keymap.set({"n", "v", "i"}, "<PageUp>", "<Nop>")
