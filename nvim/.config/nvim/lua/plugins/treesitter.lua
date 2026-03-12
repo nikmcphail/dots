@@ -13,5 +13,7 @@ return {
 			"zig",
 			"fish",
 		},
+		auto_install = true,
+		auto_update = true,
 	},
 }

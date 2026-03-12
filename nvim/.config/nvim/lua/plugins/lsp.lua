@@ -12,7 +12,20 @@ return {
 				{ "<leader>M", "<cmd>Mason<CR>", desc = "Open Mason" },
 			},
 		},
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		{
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			opts = {
+				ensure_installed = {
+					"pyright",
+					"rust-analyzer",
+					"zls",
+					"stylua",
+					"lua-language-server",
+					"black",
+					"fish-lsp",
+				},
+			},
+		},
 		{ "mason-org/mason-lspconfig.nvim", opts = {} },
 		"saghen/blink.cmp",
 	},
