@@ -1,22 +1,33 @@
 return {
+	-- {
+	-- 	"rose-pine/neovim",
+	-- 	name = "rose-pine",
+	-- 	config = function()
+	-- 		require("rose-pine").setup({
+	-- 			variant = "moon",
+	-- 			enable = {
+	-- 				terminal = true,
+	-- 				legacy_highlights = true,
+	-- 				migrations = true,
+	-- 			},
+	-- 			styles = {
+	-- 				transparency = true,
+	-- 				italic = true,
+	-- 			},
+	-- 		})
+	--
+	-- 		vim.cmd("colorscheme rose-pine")
+	-- 	end,
+	-- },
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
+		dir = "/home/nik/Documents/Repos/Lua/coffee",
 		config = function()
-			require("rose-pine").setup({
-				variant = "moon",
-				enable = {
-					terminal = true,
-					legacy_highlights = true,
-					migrations = true,
-				},
+			require("coffee").setup({
 				styles = {
 					transparency = true,
-					italic = true,
 				},
 			})
-
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd("colorscheme coffee")
 		end,
 	},
 }
