@@ -31,7 +31,7 @@ vim.opt.cmdheight = 0
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.updatetime = 250
+vim.opt.updatetime = 10
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
