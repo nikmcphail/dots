@@ -169,6 +169,7 @@ return {
 		vim.lsp.config("zls", {})
 		vim.lsp.config("taplo", {})
 		vim.lsp.config("fish_lsp", {})
+		vim.lsp.config("pyright", {})
 
 		vim.lsp.enable({
 			"lua_ls",
@@ -176,6 +177,7 @@ return {
 			"zls",
 			"taplo",
 			"fish_lsp",
+			"pyright",
 		})
 	end,
 }
