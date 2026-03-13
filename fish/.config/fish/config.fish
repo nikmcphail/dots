@@ -11,6 +11,9 @@ set -gx EDITOR nvim
 
 fish_add_path ~/.cargo/bin ~/.local/bin
 
+# opencode
+fish_add_path /home/nik/.opencode/bin
+
 alias ls='eza -al --color=always --group-directories-first --icons=always'
 alias la='eza -a --color=always --group-directories-first --icons=always'
 alias ll='eza -l --color=always --group-directories-first --icons=always'
