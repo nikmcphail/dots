@@ -88,56 +88,37 @@ return {
 				})
 			end
 
-			km("n", "<leader>gd", function()
-				require("fzf-lua").lsp_definitions({ jump1 = true })
-			end, "Goto definition (FZF)")
-
-			km("n", "<leader>gD", vim.lsp.buf.definition, "Goto definition")
-
-			km("n", "<leader>ca", vim.lsp.buf.code_action, "Code action")
-			km("n", "<leader>rn", vim.lsp.buf.rename, "Rename symbol")
-
-			km("n", "<leader>D", function()
-				vim.diagnostic.open_float({ scope = "line" })
-			end, "Line diagnostics")
-
-			km("n", "<leader>d", function()
-				vim.diagnostic.open_float({ scope = "cursor" })
-			end, "Cursor diagnostics")
-
-			km("n", "<leader>Nd", function()
-				vim.diagnostic.jump({ count = 1 })
-			end, "Next diagnostic")
-
-			km("n", "<leader>Pd", function()
-				vim.diagnostic.jump({ count = -1 })
-			end, "Previous diagnostic")
-
-			km("n", "K", vim.lsp.buf.hover, "Hover documentation")
-
-			km("n", "<leader>fd", function()
-				require("fzf-lua").lsp_definitions({ jump1 = true })
-			end, "LSP definition (FZF)")
-
-			km("n", "<leader>fr", function()
+			km("n", "gr", function()
 				require("fzf-lua").lsp_references()
-			end, "LSP references (FZF)")
+			end, "LSP references")
 
-			km("n", "<leader>ft", function()
-				require("fzf-lua").lsp_typedefs()
-			end, "LSP type definitions (FZF)")
-
-			km("n", "<leader>fs", function()
-				require("fzf-lua").lsp_document_symbols()
-			end, "LSP document symbols (FZF)")
-
-			km("n", "<leader>fw", function()
-				require("fzf-lua").lsp_workspace_symbols()
-			end, "LSP workspace symbols (FZF)")
-
-			km("n", "<leader>fi", function()
+			km("n", "gI", function()
 				require("fzf-lua").lsp_implementations()
-			end, "LSP implementations (FZF)")
+			end, "LSP implementations")
+
+			km("n", "gT", function()
+				require("fzf-lua").lsp_typedefs()
+			end, "LSP type definitions")
+
+			km("n", "gs", function()
+				require("fzf-lua").lsp_document_symbols()
+			end, "LSP document symbols")
+
+			km("n", "gW", function()
+				require("fzf-lua").lsp_workspace_symbols()
+			end, "LSP workspace symbols")
+
+			km("n", "gi", function()
+				require("fzf-lua").lsp_implementations()
+			end, "LSP implementations")
+
+			km("n", "go", function()
+				require("fzf-lua").lsp_outgoing_calls()
+			end, "LSP outgoing calls")
+
+			km("n", "gO", function()
+				require("fzf-lua").lsp_incoming_calls()
+			end, "LSP incoming calls")
 
 			if client:supports_method("textDocument/codeAction", bufnr) then
 				km("n", "<leader>oi", function()
@@ -151,6 +132,46 @@ return {
 					end, 50)
 				end, "Organize imports")
 			end
+
+			km("n", "<leader>ca", vim.lsp.buf.code_action, "Code action")
+			km("n", "<leader>rn", vim.lsp.buf.rename, "Rename symbol")
+
+			km("n", "gd", function()
+				require("fzf-lua").lsp_definitions({ jump1 = true })
+			end, "Goto definition (FZF)")
+
+			km("n", "gD", vim.lsp.buf.definition, "Goto definition")
+
+			km("n", "<leader>D", function()
+				vim.diagnostic.open_float({ scope = "line" })
+			end, "Line diagnostics")
+
+			km("n", "<leader>d", function()
+				vim.diagnostic.open_float({ scope = "cursor" })
+			end, "Cursor diagnostics")
+
+			km("n", "]d", function()
+				vim.diagnostic.jump({ count = 1 })
+			end, "Next diagnostic")
+
+			km("n", "[d", function()
+				vim.diagnostic.jump({ count = -1 })
+			end, "Previous diagnostic")
+
+			km("n", "]e", function()
+				vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
+			end, "Next error")
+			km("n", "[e", function()
+				vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.ERROR })
+			end, "Previous error")
+			km("n", "]w", function()
+				vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.WARN })
+			end, "Next warning")
+			km("n", "[w", function()
+				vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.WARN })
+			end, "Previous warning")
+
+			km("n", "K", vim.lsp.buf.hover, "Hover documentation")
 		end
 
 		vim.api.nvim_create_autocmd("LspAttach", {

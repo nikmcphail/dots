@@ -93,21 +93,26 @@ nvim binds:
 
 | Key | Action |
 |-----|-----|
-| `<leader>gd` | Goto definition (FZF) |
-| `<leader>gD` | Goto definition |
+| `gd` | Goto definition (FZF) |
+| `gD` | Goto definition |
 | `<leader>ca` | Code action |
 | `<leader>rn` | Rename symbol |
 | `<leader>D` | Line diagnostics |
 | `<leader>d` | Cursor diagnostics |
-| `<leader>Nd` | Next diagnostic |
-| `<leader>Pd` | Previous diagnostic |
+| `]d` | Next diagnostic |
+| `[d` | Previous diagnostic |
+| `]e` | Next error |
+| `[e` | Previous error |
+| `]w` | Next warning |
+| `[w` | Previous warning |
 | `K` | Hover documentation |
-| `<leader>fd` | LSP definition (FZF) |
-| `<leader>fr` | LSP references (FZF) |
-| `<leader>ft` | LSP type definitions (FZF) |
-| `<leader>fs` | LSP document symbols (FZF) |
-| `<leader>fw` | LSP workspace symbols (FZF) |
-| `<leader>fi` | LSP implementations (FZF) |
+| `gr` | LSP references |
+| `gI` | LSP implementations |
+| `gT` | LSP type definitions |
+| `gs` | LSP document symbols |
+| `gW` | LSP workspace symbols |
+| `go` | LSP outgoing calls |
+| `gO` | LSP incoming calls |
 | `<leader>oi` | Organize imports (if supported) |
 | `<leader>q` | Open diagnostic list |
 | `<leader>dl` | Show line diagnostics |
